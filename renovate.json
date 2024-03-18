@@ -16,6 +16,5 @@
         "github-actions"
       ]
     }
-  ],
-  "prConcurrency": 10
+  ]
 }
