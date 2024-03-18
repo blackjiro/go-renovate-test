@@ -1,0 +1,21 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "^golang$"
+      ],
+      "groupName": "golang",
+      "groupSlug": "golang-update",
+      "matchManagers": [
+        "gomod",
+        "dockerfile",
+        "github-actions"
+      ]
+    }
+  ],
+  "prConcurrency": 10
+}
