@@ -5,15 +5,15 @@
   ],
   "packageRules": [
     {
-      // グループ名を共通化すれば、同じグループに属するパッケージを一括で更新できる
-      "groupName": "golang",
+      // gomodのgolangのversionに対応する、renovateのdatasource
+      "groupName": "custom-golang",
       "matchDatasources": [
-        "golang-version" // gomodのgolangのversionに対応する、renovateのdatasource
+        "golang-version"  // ref: https://docs.renovatebot.com/modules/datasource/golang-version/
       ]
     },
     {
-      // グループ名を共通化すれば、同じグループに属するパッケージを一括で更新できる
-      "groupName": "golang",
+      // すでに作成されているグループ名を指定すれば、下記でマッチしたパターンが同じグループにまとめられる
+      "groupName": "custom-golang",
       "matchDatasources": [
         "docker"
       ],
