@@ -5,17 +5,28 @@
   ],
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "^golang$"
+      "matchDatasources": [
+        "golang-version"
       ],
-      "groupName": "golang",
-      "groupSlug": "golang-update",
-      "matchManagers": [
-        "gomod",
-        "dockerfile",
-        "github-actions"
-      ]
+      "groupName": "golang"
+    },
+    {
+      "matchDatasources": [
+        "docker"
+      ],
+      "matchPackageNames": [
+        "golang"
+      ],
+      "groupName": "golang"
+    },
+    {
+      "matchDatasources": [
+        "github-tags"
+      ],
+      "matchPackageNames": [
+        "actions/setup-go"
+      ],
+      "groupName": "golang"
     }
-  ],
-  "prConcurrency": 10
+  ]
 }
