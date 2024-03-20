@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
   db:
-    image: postgres:14
+    image: postgres:16
     environment:
       POSTGRES_DB: exampledb
       POSTGRES_USER: exampleuser
