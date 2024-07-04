@@ -3,28 +3,4 @@
   "extends": [
     "config:recommended"
   ],
-  "packageRules": [
-    {
-      // gomodのgolangのversionに対応する、renovateのdatasource
-      "groupName": "custom-golang2",
-       "matchDatasources": [
-        "go"
-      ],
-      "matchPackageNames": [
-        "go",
-      ],
-    },
-    {
-      // すでに作成されているグループ名を指定すれば、下記でマッチしたパターンが同じグループにまとめられる
-      "groupName": "custom-golang",
-      "matchDatasources": [
-        "docker"
-      ],
-      // Dockerのイメージ名を直接指定
-      "matchPackageNames": [
-        "golang",
-        "cimg/go"
-      ],
-    }
-  ]
 }
