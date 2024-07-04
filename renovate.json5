@@ -3,4 +3,23 @@
   "extends": [
     "config:recommended"
   ],
+  "packageRules": [
+    {
+      "groupName": "go-version",
+      "matchDatasources": ["golang-version"],
+      "enabled": true,
+    },
+    {
+      // すでに作成されているグループ名を指定すれば、下記でマッチしたパターンが同じグループにまとめられる
+      "groupName": "custom-golang",
+      "matchDatasources": [
+        "docker"
+      ],
+      // Dockerのイメージ名を直接指定
+      "matchPackageNames": [
+        "golang",
+        "cimg/go"
+      ],
+    }
+  ]
 }
