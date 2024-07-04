@@ -7,9 +7,12 @@
     {
       // gomodのgolangのversionに対応する、renovateのdatasource
       "groupName": "custom-golang2",
-      "matchDatasources": [
-        "golang-version"  // ref: https://docs.renovatebot.com/modules/datasource/golang-version/
-      ]
+       "matchDatasources": [
+        "go"
+      ],
+      "matchPackageNames": [
+        "go",
+      ],
     },
     {
       // すでに作成されているグループ名を指定すれば、下記でマッチしたパターンが同じグループにまとめられる
