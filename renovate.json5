@@ -6,7 +6,7 @@
   "packageRules": [
     {
       // gomodのgolangのversionに対応する、renovateのdatasource
-      "groupName": "custom-golang",
+      "groupName": "custom-golang2",
       "matchDatasources": [
         "golang-version"  // ref: https://docs.renovatebot.com/modules/datasource/golang-version/
       ]
