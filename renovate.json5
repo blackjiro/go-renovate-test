@@ -5,22 +5,25 @@
   ],
   "packageRules": [
     {
-      "groupName": "go-version",
-      "matchDatasources": ["golang-version"],
-      "matchPackageNames": ["go"],
+      // go.mod の go directive
+      "groupName": "golang",
+      "matchManagers": ["gomod"],
+      "matchDepNames": ["go"],
+      "matchDepTypes": ["golang"],
+      "rangeStrategy": "bump",
       "enabled": true,
     },
     {
-      // すでに作成されているグループ名を指定すれば、下記でマッチしたパターンが同じグループにまとめられる
-      "groupName": "custom-golang",
-      "matchDatasources": [
-        "docker"
-      ],
-      // Dockerのイメージ名を直接指定
-      "matchPackageNames": [
-        "golang",
-        "cimg/go"
-      ],
+      // Dockerfile の golang イメージ, CircleCI の cimg/go イメージ
+      "groupName": "golang",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["golang", "cimg/go"],
+    },
+    {
+      // GitHub Actions の setup-go (go-version)
+      "groupName": "golang",
+      "matchManagers": ["github-actions"],
+      "matchDepNames": ["go"],
     }
   ]
 }
