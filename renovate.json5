@@ -1,7 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    "github>aquaproj/aqua-renovate-config#2.8.0"
   ],
   "packageRules": [
     {
@@ -26,10 +27,11 @@
       "matchDepNames": ["go"],
     },
     {
-      // aqua.yaml の golang/go
+      // aqua.yaml の golang/go (aqua-renovate-config の custom regex manager 経由)
       "groupName": "golang",
-      "matchManagers": ["aqua"],
-      "matchPackageNames": ["golang/go"],
+      "matchDatasources": ["github-tags"],
+      "matchDepNames": ["golang/go"],
+      "matchFileNames": ["aqua.yaml"],
     }
   ]
 }
