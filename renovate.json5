@@ -24,6 +24,12 @@
       "groupName": "golang",
       "matchManagers": ["github-actions"],
       "matchDepNames": ["go"],
+    },
+    {
+      // aqua.yaml の golang/go
+      "groupName": "golang",
+      "matchManagers": ["aqua"],
+      "matchPackageNames": ["golang/go"],
     }
   ]
 }
